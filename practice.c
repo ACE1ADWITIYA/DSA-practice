@@ -58,26 +58,7 @@ int main(){
 int main(){
     int arr[]={11,99,12,90,22,89,23,88,33,78,34,77,44,67,45,66,56};
     int size= sizeof(arr)/sizeof(int);
-    // printf("%d", size);
-    // for(int i=size-1;i>=0;i--){
-    //     printf(" %d ",arr[i]);
-    //     if(arr[i]> arr[i-1] && arr[i]<arr[i+1]){
-    //         continue;
-    //     }
-        
-    //     else if(arr[i]< arr[i+1]){
-    //         arr[i]= arr[i]* arr[i+1];
-    //         arr[i+1]=arr[i] / arr[i+1];
-    //         arr[i]=arr[i] / arr[i+1];
-
-    //     }
-    //     else if(arr[i]< arr[i-1]){
-    //         arr[i]= arr[i]* arr[i-1];
-    //         arr[i-1]=arr[i] / arr[i-1];
-    //         arr[i]=arr[i] / arr[i-1];
-
-    //     }
-    // }
+    
     for(int i=0;i<size;i++){
         printf( " %d ",arr[i]);
         for (int j=0;j<size;j++){
@@ -97,27 +78,31 @@ int main(){
 }
 */
 
+//SWAPPER
+/*
 
 int main(){
-    int arr[10];
-    for(int i=0;i<10;i++){
-        printf("enter the values\n");
-        scanf("%d",&arr[i]);
+    int arr[]={1,9,2,8,3,7,4,6,5,0};
+    int size=sizeof(arr)/sizeof(int);
+    int c=0,b=size-1;
+    // printf("%d",b);
+    int * ptr1;
+    int * ptr2;
+    // printf("%d %d", *ptr1, *ptr2);
+    while(c<b){
+        ptr2=&arr[b];
+        ptr1=&arr[c];
+        int a=*ptr1;
+        *ptr1=*ptr2;
+        *ptr2=a;
+        c++;
+        b--;
     }
-    for(int i=0;i<10;i++){
-        printf( " %d ",arr[i]);
+    for(int i=0;i<size;i++){
+        printf(" %d ", arr[i]);
     }
-    for(int i=0;i<10;i++){
-        // printf( " %d ",arr[i]);
-        for (int j=0;j<10;j++){
-            if(arr[i]>arr[j]){
-                arr[i]= arr[i]* arr[j];
-                arr[j]=arr[i] / arr[j];
-                arr[i]=arr[i] / arr[j];
 
-            }
-        }
-    }
     
     return 0;
 }
+*/
